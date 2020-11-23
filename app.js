@@ -29,8 +29,6 @@ request({ url: geoUrl, json: true }, (error, response) => {
     console.log('Unable to find location')
   } else {
     const { center } = response.body.features[0]
-    const lat = center[1]
-    const long = center[0]
-    console.log(`The latitude and logtitude is ${lat}, ${long}`)
+    console.log(`The latitude and logtitude is ${center[1]}, ${center[0]}`)
   }
 })
